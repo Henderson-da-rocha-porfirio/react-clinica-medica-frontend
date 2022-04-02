@@ -7,6 +7,7 @@
 ### 3. Instalar o [Yarn](https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable)
 ### 4. Instalando o instalador [Create REACT](https://www.npmjs.com/package/create-react-app) para criar um App React: npm i create-react-app
 ### 5. Rodando o comando: npx create-react-app clinicaapp
-### 6. Instalar o Módulo [DOM](https://www.npmjs.com/package/react-router-dom) dentro da pasta do projeto:  npm i react-router-dom
-### 7. Instalar o [Axios](https://www.npmjs.com/package/axios): npm i axios
+### 6. Instalar o Módulo [DOM](https://www.npmjs.com/package/react-router-dom) - roteador react :  npm i react-router-dom
+### 7. Instalar o [Axios](https://www.npmjs.com/package/axios) - chama uma API Restful: npm i axios 
 
+\'  
