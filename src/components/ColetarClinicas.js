@@ -1,6 +1,6 @@
 import React from "react";
 
-class Home extends React.Component {        // Todo component React herda da classe React.Component e implementa o método Render.
+class ColetarClinicas extends React.Component {        // Todo component React herda da classe React.Component e implementa o método Render.
     render(){                               // Método render é aquele responsável pelo que aparece no Browser e retornará o que estiver dentro dos parênteses.
                                             // Retornando um simples elemento de div e é preciso externar este component. Que exporta JSx.
         return(<div>                        
@@ -8,6 +8,6 @@ class Home extends React.Component {        // Todo component React herda da cla
     </div>)
     }
 }
-    export default Home;                    // Exportando essa div. Daí agora poderemos utilizar em outros componentes.
+    export default ColetarClinicas;                    // Exportando essa div. Daí agora poderemos utilizar em outros componentes.
 
                          

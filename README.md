@@ -28,3 +28,6 @@ npm i axios
 ### 1. package.json: tem todas as dependências e todas as libraries requeridas pelo index.html.
 ### 2. index.html: Ponto de início da aplicação.
 ### 3. App.js: Componente chave que inicia tudo que está no index.js.
+
+## React:
+### 1. JSX: é uma extensão React para a sintaxe da linguagem JavaScript que fornece uma maneira de estruturar a renderização de componentes usando uma sintaxe familiar a muitos desenvolvedores. É semelhante em parência ao HTML. Ela é responsável em criar o HTML DOM.
