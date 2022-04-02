@@ -1,5 +1,5 @@
 # Clinica React App
-##Instalando:
+## Instalando:
 ### 1. Instalar o [NVM](https://github.com/coreybutler/nvm-windows/releases) - > Se quiser baixar direto o [nvm-setup.zip](https://github.com/coreybutler/nvm-windows/releases/download/1.1.9/nvm-setup.zip)
 #### 1.1 - Descompacte e instale nvm-setup.exe
 ### 2. Pegue aqui o número da versão estável do [Node](https://nodejs.org/) e rode o comando:
@@ -23,3 +23,8 @@ nvm use 16.13.0 ( versão apenas de exemplo - use a que quiser )
 ````
 npm i axios
 ````
+
+## App:
+### 1. package.json: tem todas as dependências e todas as libraries requeridas pelo index.html.
+### 2. index.html: Ponto de início da aplicação.
+### 3. App.js: Componente chave que inicia tudo que está no index.js.
