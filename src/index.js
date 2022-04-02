@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from 'react-router-dom';
 
-// App é o primeiro a pegar as renderizações
+// App é o primeiro a pegar as renderizações. Depois dele, precisamos ir em App.js e configurarmos as rotas como segundo passo.
 // App é o root element
 // App.js = é o cara que roteia para o App alí embaixo.
 ReactDOM.render(                                      
