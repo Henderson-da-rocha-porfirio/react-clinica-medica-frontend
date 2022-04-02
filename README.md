@@ -1,4 +1,4 @@
-# Clinica React App
+# Clínica React App
 ## Instalando:
 ### 1. Instalar o [NVM](https://github.com/coreybutler/nvm-windows/releases) - > Se quiser baixar direto o [nvm-setup.zip](https://github.com/coreybutler/nvm-windows/releases/download/1.1.9/nvm-setup.zip)
 #### 1.1 - Descompacte e instale nvm-setup.exe
@@ -31,8 +31,11 @@ npm i axios
 
 ## React:
 ### 1. JSX: é uma extensão React para a sintaxe da linguagem JavaScript que fornece uma maneira de estruturar a renderização de componentes usando uma sintaxe familiar a muitos desenvolvedores. É semelhante em parência ao HTML. Ela é responsável em criar o HTML DOM.
+<<<<<<< HEAD
 
 ## Routing:
 ### Roteando de um component para o outro ou de UI para outra precisamos trabalhar com dois arquivos js:
 #### - index.js
 #### - app.js
+=======
+>>>>>>> 2c64a5b3e7c4afc1e5c3c432ded79ab89feaf174
