@@ -8,5 +8,5 @@
 ### 4. Instalando o instalador para criar um App React: npm i create-react-app
 ### 5. Rodando o comando: npx create-react-app clinicaapp
 ### 6. Instalar o Módulo [DOM](https://www.npmjs.com/package/react-router-dom) dentro da pasta do projeto:  npm i react-router-dom
-### 7. teste
+### 7. Instalar o [Axios](https://www.npmjs.com/package/axios): npm i axios
 
