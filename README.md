@@ -1,4 +1,4 @@
-# Clinica React App
+# Clínica React App
 ## Instalando:
 ### 1. Instalar o [NVM](https://github.com/coreybutler/nvm-windows/releases) - > Se quiser baixar direto o [nvm-setup.zip](https://github.com/coreybutler/nvm-windows/releases/download/1.1.9/nvm-setup.zip)
 #### 1.1 - Descompacte e instale nvm-setup.exe
