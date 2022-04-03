@@ -2,11 +2,14 @@
 ## Instalando:
 ### 1. Instalar o [NVM](https://github.com/coreybutler/nvm-windows/releases) - > Se quiser baixar direto o [nvm-setup.zip](https://github.com/coreybutler/nvm-windows/releases/download/1.1.9/nvm-setup.zip)
 #### 1.1 - Descompacte e instale nvm-setup.exe
-### 2. Pegue aqui o número da versão estável do [Node](https://nodejs.org/) e rode o comando:
+### 2. Pegue aqui o número da versão estável do [Node](https://nodejs.org/) e rode o comando ( versão apenas de exemplo - use a que quiser ):
 ````
-nvm use 16.13.0 ( versão apenas de exemplo - use a que quiser )
+nvm use 16.13.0
 ````
 ### 3. Instalar o [Yarn](https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable)
+````
+npm install --global yarn
+````
 ### 4. Instalando o instalador [Create REACT](https://www.npmjs.com/package/create-react-app) para criar um App React:
 ````
  npm i create-react-app
@@ -41,3 +44,21 @@ yarn start
 ### Roteando de um component para o outro ou de UI para outra precisamos trabalhar com dois arquivos js:
 #### - index.js
 #### - app.js
+## Verificando Versão:
+### NVM:
+````
+ nvm version
+ ````
+ ### NODE:
+````
+ node -v
+ ````
+### NPM:
+````
+npm -v
+````
+### YARN:
+````
+yarn -v
+````
+ ### 
