@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import { Link } from 'react-router-dom';
 
 // Este é o primeiro componente a ser trabalhado. É onde recuperaremos todos os detalhes do BackEnd e os mostraremos em forma tabular (tabelas)
 // é onde serão recuperados todos os detalhes do Paciente.
@@ -10,21 +11,60 @@ import axios from "axios";
 // ComponentWillMount é o cara certo para montar a lifecycle. Ele será o responsável em recuperar toda a informação do paciente do BackEnd.
 // É necessário importar axios para
 // O método get é o que pega os métodos dentro destes parentêses que passarmos como parâmetros, que é a URL para o RestFul API.
-// Dentro de axios colocamos a URI feita, possivelmente antes, e testada no Postman
-class Home extends React.Component { 
+// Dentro de axios colocamos a URI feita, possivelmente antes, e testada no Postman;
+//res = response
+// res.data = dar o dado JSON que vem do BackEnd e o "setamos" no estado ( state ).
+// Alí em setState, fazemos o update do estado inicial, que não tem nada nele, mas dentro do método setState com chaves, onde colocaremos o PacienteDado
+// paciente será pego, passará por RowCreator que o renderizará em tela.
+// this.props.item nos dará acesso ao item={paciente}
+class Home extends React.Component {
+    state = {
+        pacienteDado: []
+    }
 
     componentWillMount() {
 
-        axios.get('localhost:8080/clinicaservices/api/pacientes').then()
+        axios.get('localhost:8080/clinicaservices/api/pacientes').then()(res => {
+            const pacienteDado = res.data;
+            this.setState({ pacienteDado })
+        })
 
     }
-    render(){                               
-                                            
-        return(<div>                        
-    
-    </div>)
+    render() {
+        // Aqui vamos mostrar todos os dados dos pacientes:                                    
+        return (<div>
+            <h2>Pacientes:</h2>
+            <table align='center'>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nome</th>
+                        <th>Sobrenome</th>
+                        <th>Idade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {this.state.pacienteDado.map(paciente => <RowCreator item={paciente} />)}
+                </tbody>
+            </table>
+            <Link to={'/adicionarPaciente'}>Registrar Paciente</Link>
+        </div>)
     }
 }
-    export default Home;                    
+class RowCreator extends React.Component {
+    render() {
+        var paciente = this.props.item;
+        return <tr>
+            <td>{paciente.id}</td>
+            <td>{paciente.primeiroNome}</td>
+            <td>{paciente.ultimoNome}</td>
+            <td>{paciente.idade}</td>
+            <td><Link to={'/pacienteDetalhes/' + paciente.id}>Adicionar Dados</Link></td>
+            <td><Link to={'/analise/' + paciente.id}>Análise</Link></td>
+        </tr>
 
-                         
+    }
+}
+
+export default Home;
+
