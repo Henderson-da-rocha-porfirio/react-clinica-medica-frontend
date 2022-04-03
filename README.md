@@ -26,6 +26,10 @@ npm install --global yarn
 ````
 npm i axios
 ````
+### 8. Instalar o [Toastify](https://www.npmjs.com/package/toastify) - Tipo de pop up para respostas:
+````
+ npm i react-toastify
+````
 
 ## App:
 ### 1. package.json: tem todas as dependências e todas as libraries requeridas pelo index.html.
