@@ -17,8 +17,8 @@ class AdicionarPaciente extends React.Component {
         console.log(data);
         axios.post("http://localhost:8080/clinicaservices/api/pacientes", data)
             .then(res => {
-                toast.success('Paciente Adicionado Com Sucesso')
-                //  document.write("Patient Created Successfully!!");
+                toast.success('Paciente Adicionado Com Sucesso', { position: toast.POSITION.BOTTOM_CENTER })
+
             })
     }
     render() {
