@@ -36,7 +36,7 @@ npm i axios
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 ````
-#### E abaixo de switch:
+#### E abaixo de </Switch>:
 ````
 <ToastContainer autoClose={2000} />
 ````
@@ -49,7 +49,6 @@ import { toast } from 'react-toastify';
 ````
 .then(res => {
                 toast.success('Paciente Adicionado Com Sucesso')
-                //  document.write("Patient Created Successfully!!");
             })
 ````
 ## App:
