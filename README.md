@@ -30,7 +30,28 @@ npm i axios
 ````
  npm i react-toastify
 ````
-
+### 8.1. Para fazer funcionar o toastify:
+#### - Adicionar em App.js:
+````
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+````
+#### E abaixo de switch:
+````
+<ToastContainer autoClose={2000} />
+````
+#### E em AdicionarPaciente.js:
+````
+import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
+````
+#### E adicione aida em AdicionarPaciente:
+````
+.then(res => {
+                toast.success('Paciente Adicionado Com Sucesso')
+                //  document.write("Patient Created Successfully!!");
+            })
+````
 ## App:
 ### 1. package.json: tem todas as dependências e todas as libraries requeridas pelo index.html.
 ### 2. index.html: Ponto de início da aplicação.

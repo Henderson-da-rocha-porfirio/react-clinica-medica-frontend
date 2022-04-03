@@ -6,6 +6,8 @@ import ColetarClinicas from './components/ColetarClinicas';
 import AdicionarPaciente from './components/AdicionarPaciente';
 import AnaliseDados from './components/AnaliseDados';
 import GeradorGrafico from './components/GeradorGrafico';
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 
 // Aqui em App.js é onde definiremos todas as nossas rotas
@@ -22,6 +24,7 @@ function App() {
         <Route exact path="/analise/:pacienteId" component={AnaliseDados} />
         <Route exact path="/grafico/:componenteNome/:pacienteId" component={GeradorGrafico} />
       </Switch>
+      <ToastContainer autoClose={2000} />
     </div>
   );
 }

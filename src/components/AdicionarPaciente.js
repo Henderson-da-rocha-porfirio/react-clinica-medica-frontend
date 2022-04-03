@@ -1,6 +1,7 @@
 import React from "react";
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 // Todo component React herda da classe React.Component e implementa o método Render.
 // Método render é aquele responsável pelo que aparece no Browser e retornará o que estiver dentro dos parênteses.
@@ -16,6 +17,7 @@ class AdicionarPaciente extends React.Component {
         console.log(data);
         axios.post("http://localhost:8080/clinicaservices/api/pacientes", data)
             .then(res => {
+                toast.success('Paciente Adicionado Com Sucesso')
                 //  document.write("Patient Created Successfully!!");
             })
     }
