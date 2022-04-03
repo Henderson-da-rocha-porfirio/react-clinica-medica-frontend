@@ -1,6 +1,6 @@
 import React from "react";
-import axios from "axios";
 import { Link } from 'react-router-dom';
+import axios from "axios";
 
 // Este é o primeiro componente a ser trabalhado. É onde recuperaremos todos os detalhes do BackEnd e os mostraremos em forma tabular (tabelas)
 // é onde serão recuperados todos os detalhes do Paciente.
@@ -23,34 +23,35 @@ class Home extends React.Component {
     }
 
     componentWillMount() {
-
-        axios.get('localhost:8080/clinicaservices/api/pacientes').then()(res => {
+        axios.get('http://localhost:8080/clinicaservices/api/pacientes').then(res => {
             const pacienteDado = res.data;
             this.setState({ pacienteDado })
         })
-
     }
+
     render() {
-        // Aqui vamos mostrar todos os dados dos pacientes:                                    
         return (<div>
             <h2>Pacientes:</h2>
             <table align='center'>
                 <thead>
                     <tr>
                         <th>Id</th>
-                        <th>Nome</th>
-                        <th>Sobrenome</th>
+                        <th>Primeiro Nome</th>
+                        <th>Último Nome</th>
                         <th>Idade</th>
+                        <th></th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
                     {this.state.pacienteDado.map(paciente => <RowCreator item={paciente} />)}
                 </tbody>
             </table>
-            <Link to={'/adicionarPaciente'}>Registrar Paciente</Link>
+            <Link to={'/adicionarPaciente'}>Registrar paciente</Link>
         </div>)
     }
 }
+
 class RowCreator extends React.Component {
     render() {
         var paciente = this.props.item;
@@ -59,12 +60,10 @@ class RowCreator extends React.Component {
             <td>{paciente.primeiroNome}</td>
             <td>{paciente.ultimoNome}</td>
             <td>{paciente.idade}</td>
-            <td><Link to={'/pacienteDetalhes/' + paciente.id}>Adicionar Dados</Link></td>
-            <td><Link to={'/analise/' + paciente.id}>Análise</Link></td>
+            <td><Link to={'/pacienteDetalhes/' + paciente.id}>Adicionar dados</Link></td>
+            <td><Link to={'/analise/' + paciente.id}>Analise</Link></td>
         </tr>
-
     }
 }
 
 export default Home;
-

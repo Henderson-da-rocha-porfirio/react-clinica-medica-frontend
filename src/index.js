@@ -3,15 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {BrowserRouter} from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 // App é o primeiro a pegar as renderizações. Depois dele, precisamos ir em App.js e configurarmos as rotas como segundo passo.
 // App é o root element
 // App.js = é o cara que roteia para o App alí embaixo.
-ReactDOM.render(                                      
-  <React.StrictMode>                                                     
-    <BrowserRouter><App /></BrowserRouter>                                
-  </React.StrictMode>,
+ReactDOM.render(
+  <BrowserRouter><App /></BrowserRouter>,
   document.getElementById('root')
 );
 

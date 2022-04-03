@@ -1,6 +1,6 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-import {Route,Switch} from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import Home from './components/Home';
 import ColetarClinicas from './components/ColetarClinicas';
 import AdicionarPaciente from './components/AdicionarPaciente';
@@ -15,15 +15,14 @@ import GeradorGrafico from './components/GeradorGrafico';
 function App() {
   return (
     <div className="App">
-      <Switch>[
-        <Route exact path="/" component={Home}/>
-        <Route exact path="/pacienteDetalhes/:pacienteId" component={ColetarClinicas}/>
-        <Route exact path="/adicionarPaciente/" component={AdicionarPaciente}/>
-        <Route exact path="/analise/:pacienteId" component={AnaliseDados}/>
-        <Route exact path="/grafico/:componenteNome/:pacienteId" component={GeradorGrafico}/>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/pacienteDetalhes/:pacienteId" component={ColetarClinicas} />
+        <Route exact path="/adicionarPaciente/" component={AdicionarPaciente} />
+        <Route exact path="/analise/:pacienteId" component={AnaliseDados} />
+        <Route exact path="/grafico/:componenteNome/:pacienteId" component={GeradorGrafico} />
       </Switch>
     </div>
   );
 }
-
 export default App;

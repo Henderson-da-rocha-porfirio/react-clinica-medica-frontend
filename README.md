@@ -32,6 +32,11 @@ npm i axios
 ## React:
 ### 1. JSX: é uma extensão React para a sintaxe da linguagem JavaScript que fornece uma maneira de estruturar a renderização de componentes usando uma sintaxe familiar a muitos desenvolvedores. É semelhante em parência ao HTML. Ela é responsável em criar o HTML DOM.
 
+### 2. Rodar a aplicação:
+````
+yarn start
+````
+
 ## Routing:
 ### Roteando de um component para o outro ou de UI para outra precisamos trabalhar com dois arquivos js:
 #### - index.js
