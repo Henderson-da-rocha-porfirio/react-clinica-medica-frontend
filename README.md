@@ -48,7 +48,7 @@ import { toast } from 'react-toastify';
 #### E adicione aida em AdicionarPaciente:
 ````
 .then(res => {
-                toast.success('Paciente Adicionado Com Sucesso')
+                toast.success('Paciente Adicionado Com Sucesso', { position: toast.POSITION.BOTTOM_CENTER })
             })
 ````
 ## App:
