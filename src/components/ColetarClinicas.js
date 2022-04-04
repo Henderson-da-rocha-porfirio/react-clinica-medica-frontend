@@ -1,5 +1,7 @@
 import React from "react";
 import axios from 'axios';
+import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 // Todo component React herda da classe React.Component e implementa o método Render.
 // Método render é aquele responsável pelo que aparece no Browser e retornará o que estiver dentro dos parênteses.
 // Retornando um simples elemento de div e é preciso externar este component. Que exporta JSx.
@@ -26,7 +28,8 @@ class ColetarClinicas extends React.Component {
         }
         axios.post("localhost:8080/clinicaservices/api/dadosclinicos", data)
             .then(res => {
-                //this.props.history.push('/confirmReservation/'+res.data.id)
+                toast.success('Dados do Paciente Salvos Com Sucesso', { position: toast.POSITION.BOTTOM_CENTER })
+
             })
     }
 
@@ -47,6 +50,7 @@ class ColetarClinicas extends React.Component {
                 Valor:<input type="text" name="componenteValue" onChange={(event) => { this.componenteValue = event.target.value }} /><br />
                 <button onClick={this.handleSubmit.bind(this)}>Confirme</button>
             </form>
+            <Link to={'/'}>Voltar</Link>
         </div>)
     }
 }
