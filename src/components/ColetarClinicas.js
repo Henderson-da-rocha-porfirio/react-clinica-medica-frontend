@@ -6,6 +6,7 @@ import { toast } from 'react-toastify';
 // Método render é aquele responsável pelo que aparece no Browser e retornará o que estiver dentro dos parênteses.
 // Retornando um simples elemento de div e é preciso externar este component. Que exporta JSx.
 // Exportando essa div. Daí agora poderemos utilizar em outros componentes.
+// state component = definido como blank {}
 class ColetarClinicas extends React.Component {
 
     state = {}
@@ -26,7 +27,7 @@ class ColetarClinicas extends React.Component {
             componenteNome: this.componenteNome,
             componenteValue: this.componenteValue,
         }
-        axios.post("localhost:8080/clinicaservices/api/dadosclinicos", data)
+        axios.post("http://localhost:8080/clinicaservices/api/dadosclinicos", data)
             .then(res => {
                 toast.success('Dados do Paciente Salvos Com Sucesso', { position: toast.POSITION.BOTTOM_CENTER })
 
